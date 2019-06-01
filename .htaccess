@@ -1,0 +1,21 @@
+AddType application/x-httpd-php .php .html .htm
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ https://www.2uu.tokyo/$1 [R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.2uu.tokyo/$1 [R=301]
+RewriteCond %{HTTP_HOST} ^www\.2uu2uu\.ddo\.jp
+RewriteRule ^(.*)$ https://www.2uu.tokyo/$1 [R=301,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /blog/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ./blog/index.php [L]
+</IfModule>
+

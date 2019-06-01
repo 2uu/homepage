@@ -1,0 +1,24 @@
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Authentication</title>
+  <meta content="secret page of 2uu homepage">
+  <meta name="robots" content="noindex">
+</head>
+
+<script type="text/javascript">
+function gate(){
+   var UserInput = prompt("Please enter password: ","");
+   if( /\W+/g.test(UserInput) ) {
+      alert("Only half-width notation is permitted");
+   }
+   else if( UserInput != null ) {
+      location.href = "../"+UserInput;
+   }
+}
+</script>
+
+
+<center>
+<input type="button" value="Access to a page that require authentication" onclick="gate();">
+</html>
