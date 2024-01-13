@@ -178,7 +178,9 @@
 	z-index:-2;
 }	
 .cd-fixed-bg.cd-bg-1 {
-	background-image: url("../images/background-1.png");
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .cd-fixed-bg.cd-bg-2 {
 	background-image: url("../images/background-2.JPG");
@@ -217,7 +219,7 @@
 
 /*****site header*****/
 .site-header{
-    background: rgba(0,0,0,1);
+    background: rgba(0,0,0,0.4);
     display: flex;
     padding: 1% 20px;/*3% 20px;*/
     position: fixed;
